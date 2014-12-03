@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>StudyRoom - Study in a free room</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Map CSS -->
+    <link href="css/styleMap.css" rel="stylesheet" type="text/css">
+
+    <!-- Details CSS -->
+    <link href="css/detailsRoom.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+
+    <script>
+
+        const TIME_TRANSLATION = 400;
+
+        var polo="A";
+        var piano="0";
+        var mappa="maps/APiano0.html";
+        var widthDetails=0;
+        var toogle = false;
+        $(document).ready(function(){
+            $(".containerMap").load(mappa);
+
+            widthDetails = $("#wrapper").width() - $("#page-wrapper").width()+1.8;
+            $(".detailsRoom").css("width",widthDetails);
+
+            $(".nav .nav-second-level li").click(function(){
+                piano = $(this).data("piano");
+                mappa = "maps/"+polo+"Piano"+piano+".html";
+                $(".containerMap").load(mappa);
+            });
+
+            $(".containerMap").on("click",".room",function(){
+                //alert($(this).text());
+                var larghezza = widthDetails;
+                var tmp = "-="+larghezza;
+                if(toogle==false) {
+                    //aggiorna valori
+                    $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear');
+                    toogle=true;
+                }
+                else
+                {
+                    $(".details").fadeOut();
+                    //aggiorna valori
+                    $(".details").fadeIn();
+
+                }
+            });
+
+
+
+            $(".containerMap").on("mouseenter",".room", function () {
+                var red, green, blue;
+                var color = $(this).css("background-image");
+                color = color.split("rgb")[1].split(")")[0]+")";
+
+                var colorsOnly = color.substring(color.indexOf('(') + 1, color.lastIndexOf(')')).split(/,\s*/),
+                        red = colorsOnly[0],
+                        green = colorsOnly[1],
+                        blue = colorsOnly[2];
+                //opacity = colorsOnly[3];
+
+                color="rgb("+red+","+green+","+blue+")";
+                //alert(color);
+
+                $(this).css("borderColor",color).css("borderWidth","1px");
+            }).on("mouseleave",".room",function(){
+                $(this).css("borderColor","black").css("borderWidth","1px");
+            });
+
+            $(".detailsRoom .close").click(function()
+            {
+                var tmp = "+="+widthDetails;
+                $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear');
+                toogle=false;
+            });
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">StudyRoom</a>
+            </div>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Maps</a>
+                        </li>
+                        <li>
+                            <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Free Rooms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Povo A<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li data-Piano="-1">
+                                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano -1<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Aula A101</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula A102</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula A103</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-Piano="0">
+                                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano 0<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Aula A201</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula A202</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula A203</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Povo B<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano -1<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Aula B101</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula B102</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula B103</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula B104</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula B105</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano 2<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Aula B106</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aula B107</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="containerMap unselectable">
+
+            </div>
+
+            <div class="detailsRoom">
+                <div class="close">X</div>
+                <div class="detailsContainer">
+                    <div class="top">
+                        <div class="round">
+                            <div class="room">
+                                A201
+                            </div>
+                        </div>
+                        <div class="dettagli">
+                            <ul>
+                                <li>blablabla</li>
+                                <li>blablabla</li>
+                                <li>blablabla</li>
+                                <li>blablabla</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vota">
+                        <div class="percentuale">
+                            <ul>
+                                <li>
+                                    <div class="voto vuota" data-perc="0">V</div>
+                                </li>
+                                <li>
+                                    <div class="voto mezza" data-perc="1">M</div>
+                                </li>
+                                <li>
+                                    <div class="voto affollata" data-perc="2">A</div>
+                                </li>
+                                <li>
+                                    <div class="voto piena" data-perc="3">P</div>
+                                </li>
+                                <li>
+                                    <div class="voto lezione" data-perc="-1">L</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lavagna">
+                            <ul>
+                                <li>
+                                    <div class="voto lava" data-perc="si">V</div>
+                                </li>
+                                <li>
+                                    <div class="voto nolava" data-perc="no">V</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <table>
+                            <tr>
+                                <td>situazione</td><td>lavagna</td><td>Rumore</td><td>orario feedback</td>
+                            </tr>
+                            <tr>
+                                <td>V</td><td>si</td><td>no</td><td>orario feedback</td>
+                            </tr>
+                            <tr>
+                                <td>V</td><td>no</td><td>si</td><td>10:12</td>
+                            </tr>
+                            <tr>
+                                <td>V</td><td>si</td><td>no</td><td>10:07</td>
+                            </tr>
+                            <tr>
+                                <td>V</td><td>si</td><td>no</td><td>9:48</td>
+                            </tr>
+                            <tr>
+                                <td>V</td><td>si</td><td>si</td><td>9:20</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
