@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>StudyRoom - Study in a free room</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Map CSS -->
+    <link href="css/styleMap.css" rel="stylesheet" type="text/css">
+
+    <!-- Details CSS -->
+    <link href="css/detailsRoomMobile.css" rel="stylesheet" type="text/css">
+
+    <!-- Mobile CSS -->
+    <link href="css/mobile.css" rel="stylesheet" type="text/css">
+
+    <!-- Mobile js-->
+    <script src="js/mobile.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- jquery detect mobile browser -->
+    <script src="js/detectMobileBrowser.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">StudyRoom</a>
+        </div>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li>
+                        <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Maps</a>
+                    </li>
+                    <li>
+                        <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Free Rooms</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Povo A<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li data-Piano="-1">
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano -1<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Aula A101</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula A102</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula A103</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-Piano="0">
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano 0<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Aula A201</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula A202</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula A203</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Povo B<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano -1<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Aula B101</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula B102</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula B103</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula B104</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula B105</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Piano 2<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Aula B106</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aula B107</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+
+    <div id="page-wrapper" class="mwrapper">
+        <div class="mContainer">
+            <div class="mMap">
+
+            </div>
+            <div class="mListRoom">
+
+            </div>
+        </div>
+        <div class="mDetails">
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/sb-admin-2.js"></script>
+</body>
+</html>

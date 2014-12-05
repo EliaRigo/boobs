@@ -1,11 +1,15 @@
 .detailsRoom{
-    width: 350px;
-    height: 100%;
+    top: 50px;
+    height: 95%;
     background-color: #f8f8f8;
     border: 1px solid black;
     position: absolute;
+    width:auto;
     left: 100%;
-    height: 100%;
+    display: none;
+    z-index: 99;
+    overflow-y: scroll;
+    padding-bottom: 10px;
 }
 
 .close{
@@ -15,31 +19,31 @@
     height: 30px;
     width: 30px;
 //color: white;
-    font-size: 30px;
+    font-size: 20pt;
     text-align: center;
 }
 
 .detailsRoom .top{
 //display: table-row;
-    min-height: 30%;
-    position: absolute;
-    width: 100%;
+   // min-height: 30%;
+   // position: absolute;
+   // width: 100%;
 //top: 50px;
 }
 
 .detailsContainer{
     top:50px;
-    width: 100%;
-    height: 100%;
     position: relative;
 //display: table;
 }
 
+
+
 .round{
-    margin-left: 25px;
-    float: left;
-    width: 100px;
-    height: 100px;
+  //  margin-left: 25px;
+  //  float: left;
+
+    height:100%;
     border-radius: 50% 50%;
     -moz-border-radius: 50% 50%;
     background-color: #BADA55;
@@ -49,20 +53,45 @@
 
 .detailsRoom .room{
     color: whitesmoke;
-    text-align: center;
-    line-height: 75px;
+    display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 12.5px;
-    width: 75px;
-    height: 75px;
-    background-color: #404040;
-    border-radius: 50% 50%;
-    -moz-border-radius: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.detailsRoom p{
+
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;;
+
+}
+
+.detailsRoom table{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+.detailsRoom table td{
+    border: none;
+}
+
+.lava{
+    margin-left: 60%;
+}
+
+.nolava{
+    margin-right: 60%;
 }
 
 .dettagli{
-    float: left;
+    text-align: left;
+    margin-left: -40px;
 //min-height: 30%;
     width: 220px;
 
@@ -77,13 +106,14 @@
 }
 
 .vota{
-    position: absolute;
-    top:25%;
+    //position: absolute;
+   // top:25%;
     width: 100%;
 //min-height: 30%;
     margin-left: auto;
     margin-right: auto;
 //display: table-row;
+    color: #000000;
 }
 
 .percentuale{
@@ -104,17 +134,22 @@
     position: relative;
     margin-left: 10px;
     text-align: center;
-    line-height: 50px;
 }
 
 .voto{
+    display: table;
+    vertical-align: middle;
     border-radius: 50% 50%;
     -moz-border-radius: 50% 50%;
-    background-color: green;
     width: 60px;
     height: 60px;
 }
 
+.lavagna{
+    display: none;
+}
+
+/*
 .lavagna{
     position: relative;
     margin-top: 30px;
@@ -130,23 +165,19 @@
     margin-left: 10px;
     text-align: center;
     line-height: 50px;
-}
+}*/
 
 .detailsRoom .bottom{
-    position: absolute;
-    top:60%;
+   // position: absolute;
+    //top:60%;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
     min-height: 30%;
-    width: 100&;
+    width: 100%;
 //background-color: yellow;
 }
 
 .detailsRoom .bottom table{
 
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
