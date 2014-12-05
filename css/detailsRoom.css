@@ -11,7 +11,7 @@
     overflow-y: scroll;
     padding-bottom: 10px;
 }
-
+/*
 .close{
     position: absolute;
     top: 10px;
@@ -21,6 +21,13 @@
 //color: white;
     font-size: 20pt;
     text-align: center;
+}*/
+
+.detailsClose{
+    font-size: 20pt;
+    text-align: center;
+    float: left!important;
+    margin-left: 10px;
 }
 
 .detailsRoom .top{
@@ -32,7 +39,6 @@
 }
 
 .detailsContainer{
-    top:50px;
     position: relative;
 //display: table;
 }
@@ -52,8 +58,6 @@
 }
 
 .detailsRoom .room{
-    color: whitesmoke;
-    display: table;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -180,4 +184,21 @@
 
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.detailsRoom .titleVuota{
+    background-color: rgba(74,186,37,1);
+}
+
+.detailsRoom .title .mezza{
+    background-color: rgba(232,193,23,1);
+}
+
+.detailsRoom .title .affollata{
+    background-color: rgba(255,63,0,1);
+}
+
+.detailsRoom .title .piena{
+    background-color: rgba(255,84,84,1);
 }
