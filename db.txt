@@ -1,0 +1,56 @@
+NOME TABELLA: ROOMS
+CAMPI:
+	-ID_ROOM INT PK
+	-ID_SCHEDULE INT FK
+	-NAME	varchar(10)
+	-ROOM_LEVEL  int
+
+NOME TABELLA: SCHEDULE
+CAMPI:
+	- ID_SCHEDULE PK
+	- 9-10		bool
+	- 10-11		bool
+	- 11-12		bool
+	- 13-14		bool
+	- 14-15		bool
+	- 15-16 	bool
+	- 16-17		bool
+	- 17-18 	bool
+	- 18-19 	bool
+	- 19-20		bool
+
+NOME TABELLA: FEEDBACK
+	-ID_FEEDBACK	PK
+	-ID_ROOM		FK
+	-USER_LEVEL		INT
+	-USER(?)		VARCHAR(10)
+	-COMMENT		VARCHAR(140)
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Ottenere livello aula (parametro: INT ID_ROOM)
+------------------------------------------------------
+SELECT ROOM_LEVEL FROM ROOMS WHERE ID_ROOM = @ID_ROOM
+------------------------------------------------------
+	
+QUERY che viene utilizzata per capire se c'è lezione in una determinata ora oppure no
+(parametro: VARCHAR LAP_TIME: orario e INT ID_ROOM)
+------------------------------------------------------
+SELECT --- FROM SCHEDULE AS S INNER JOIN ROOMS AS R ON R.ID_ROOM = S.ID_ROOM
+WHERE R.ID_ROOM = @ID_ROOM
+------------------------------------------------------
+
+CALCOLA MEDIA PESATA LIVELLO DI UN AULA (PASSATO COME PARAMETRO)
+SELECT AVG(USER_LEVEL) * 0.8 AS AVG_AULA FROM FEEDBACK WHERE ID_ROOM = 1
+
+
+ROUTINE DA FAR FARE AL SERVER
+--------------------------------
+IF(SP_CHECK_LESSON = TRUE)
+	SP_SET_ROOM_LEVEL = 0
+else
+	SP_SET_ROOM_LEVEL = SP_AVG_FEEDBACK
+
+--------------------------------
+UPDATE ROOM_LEVEL FROM ROOMS AS R INNER JOIN SCHEDULE AS S ON R.ID_SCHEDULE = S.ID_SCHEDULE 
+WHERE DATE.GETDATE() < SET @ROOM_LEVEL
