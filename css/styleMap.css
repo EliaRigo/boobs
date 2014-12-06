@@ -32,7 +32,7 @@
     //    height: 700px;
     //    width: 600px;
         width: 65%;
-        height: 80%;
+        height: 90%;
         position: absolute;
         z-index: 0;
     }
@@ -40,7 +40,7 @@
 
 .containerMap{
     z-index: 0;
-    height: 90%;
+    height: 93%;
 }
 
 .containerMap table{

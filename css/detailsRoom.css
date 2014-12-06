@@ -2,66 +2,15 @@
     top: 50px;
     height: 95%;
     background-color: #f8f8f8;
-    border: 1px solid black;
+    border: 1px solid black!important;
     position: absolute;
     width:auto;
     left: 100%;
     display: none;
     z-index: 99;
     overflow-y: scroll;
+    overflow-x: hidden;
     padding-bottom: 10px;
-}
-/*
-.close{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 30px;
-    width: 30px;
-//color: white;
-    font-size: 20pt;
-    text-align: center;
-}*/
-
-.detailsClose{
-    font-size: 20pt;
-    text-align: center;
-    float: left!important;
-    margin-left: 10px;
-}
-
-.detailsRoom .top{
-//display: table-row;
-   // min-height: 30%;
-   // position: absolute;
-   // width: 100%;
-//top: 50px;
-}
-
-.detailsContainer{
-    position: relative;
-//display: table;
-}
-
-
-
-.round{
-  //  margin-left: 25px;
-  //  float: left;
-
-    height:100%;
-    border-radius: 50% 50%;
-    -moz-border-radius: 50% 50%;
-    background-color: #BADA55;
-    border-color: #BADA55;
-    border-width: 25px;
-}
-
-.detailsRoom .room{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
 }
 
 .detailsRoom p{
@@ -83,21 +32,74 @@
 
 .detailsRoom table td{
     border: none;
+    width: 100%;
 }
 
-.lava{
-    margin-left: 60%;
+
+.detailsContainer{
+
 }
 
-.nolava{
-    margin-right: 60%;
+
+
+.detailsRoom .titleBar{
+    height: 50px;
+    width: 100%;
+
+}
+
+.titleBar td div{
+    line-height: 38px;
+}
+
+.titleBar td{
+    border-top: 1px solid #000000!important;
+    border-bottom: 1px solid #000000!important;
+}
+
+.detailsClose{
+    font-size: 20pt;
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+}
+
+
+.detailsRoom .titleVuota{
+    background-color: rgba(74,186,37,1);
+}
+
+.detailsRoom .titleMzza{
+    background-color: rgba(232,193,23,1);
+}
+
+.detailsRoom .titleAffollata{
+    background-color: rgba(255,63,0,1);
+}
+
+.detailsRoom .titlePiena{
+    background-color: rgba(255,84,84,1);
+}
+
+.detailsRoom .room {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 20pt;
+}
+
+.left{
+    position: relative;
+    text-align: justify;
+    float: left;
+    min-width: 40%;
 }
 
 .dettagli{
     text-align: left;
     margin-left: -40px;
+
 //min-height: 30%;
-    width: 220px;
 
 //display: table-row;
 }
@@ -109,6 +111,25 @@
 
 }
 
+.detailsRoom ul li strong{
+    margin-right: 15px;
+}
+
+.dettagliAula{
+    //margin: 20px 15px 0px 15px;
+    top: 6px;
+    left: 20px;
+}
+
+
+.lava{
+}
+
+.nolava{
+}
+
+
+
 .vota{
     //position: absolute;
    // top:25%;
@@ -118,26 +139,6 @@
     margin-right: auto;
 //display: table-row;
     color: #000000;
-}
-
-.percentuale{
-    position: relative;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-.percentuale ul{
-    position: relative;
-    display: inline;
-    list-style: none;
-    margin-left: -20px;
-}
-
-.percentuale li{
-    display: inline-block;
-    position: relative;
-    margin-left: 10px;
-    text-align: center;
 }
 
 .voto{
@@ -151,6 +152,28 @@
 
 .lavagna{
     display: none;
+}
+
+.lavagna td:first-child{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.lavagna td div{
+    margin-top: 10px;
+}
+
+.lavagna{
+
+}
+
+.lav-feedback td{
+    border: none!important;
+    bottom: 10px;
+}
+
+.lav-header td{
+    top: 10px
 }
 
 /*
@@ -171,34 +194,16 @@
     line-height: 50px;
 }*/
 
-.detailsRoom .bottom{
-   // position: absolute;
-    //top:60%;
-    text-align: center;
-    min-height: 30%;
-    width: 100%;
-//background-color: yellow;
-}
-
-.detailsRoom .bottom table{
-
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
-.detailsRoom .titleVuota{
-    background-color: rgba(74,186,37,1);
-}
 
-.detailsRoom .title .mezza{
-    background-color: rgba(232,193,23,1);
-}
 
-.detailsRoom .title .affollata{
-    background-color: rgba(255,63,0,1);
-}
+.round{
 
-.detailsRoom .title .piena{
-    background-color: rgba(255,84,84,1);
+    height:100%;
+    border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    background-color: #BADA55;
+    border-color: #BADA55;
+    border-width: 25px;
 }

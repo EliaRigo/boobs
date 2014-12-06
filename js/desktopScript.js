@@ -112,13 +112,17 @@ $(document).ready(function(){
         //fa qualcosa per mostrare avvenuto click
 
         //mostra lavagna
-       //$(".lavagna").show(TIME_SLIDE);
+       $(".lavagna").show(TIME_SLIDE);
 
         /* $(".lavagna").show(TIME_SLIDE, function () {
             //$(".lavagna").slide(2000);
         }); */
 
-        $(".lavagna").slideDown("slow");
+        /*$(".lavagna").slideDown(10000, function(){
+
+        });*/
+
+
     });
 
 });
