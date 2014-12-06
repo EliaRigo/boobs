@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="utf-8">
@@ -8,6 +8,9 @@
     <meta name="author" content="">
 
     <title>StudyRoom - Study in a free room</title>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +25,7 @@
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Map CSS -->
-    <link href="css/styleMap.css" rel="stylesheet" type="text/css">
+    <link href="css/styleMapMobile.css" rel="stylesheet" type="text/css">
 
     <!-- Details CSS -->
     <link href="css/detailsRoomMobile.css" rel="stylesheet" type="text/css">
@@ -32,9 +35,9 @@
 
     <!-- Mobile js-->
     <script src="js/mobile.js"></script>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    
+    <!-- Swipe js-->
+    <script src="js/swipe.js"></script>
 
     <!-- jquery detect mobile browser -->
     <script src="js/detectMobileBrowser.js"></script>
@@ -156,16 +159,102 @@
 
 
     <div id="page-wrapper" class="mwrapper">
-        <div class="mContainer">
-            <div class="mMap">
-
-            </div>
-            <div class="mListRoom">
-
+        <div id="slider" class="swipe">
+            <div class="swipe-wrap">
+                <div class="mMap">
+                    asd
+                </div>
+                <div class="mListRoom">
+                    dsa
+                </div>
             </div>
         </div>
         <div class="mDetails">
-
+            <div class="detailsContainer">
+                <table class="table">
+                    <tr>
+                        <td colspan="2"><div class="closeDetails">X</div></td>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="round">
+                                <div class="room">
+                                    <p>A201</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="3">
+                            <div class="dettagli">
+                                <ul>
+                                    <li>Aula: A201</li>
+                                    <li>Numero posti: infinity</li>
+                                    <li>Lavagna disponibile: SI</li>
+                                    <li>Rumorosa: NO</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="feedbackQuantity">
+                        <td><div class="voto vuota" data-perc="0"><p>V</p></div></td>
+                        <td><div class="voto mezza" data-perc="0"><p>M</p></div></td>
+                        <td><div class="voto affollata" data-perc="0"><p>A</p></div></td>
+                        <td><div class="voto piena" data-perc="0"><p>P</p></div></td>
+                        <td><div class="voto lezione" data-perc="0"><p>L</p></div></td>
+                    </tr>
+                    <tr class=" lavagna">
+                        <td colspan="2">
+                            <div class="voto lava vuota" data-perc="si"><p>SI</p></div>
+                        </td>
+                        <td></td>
+                        <td colspan="2">
+                            <div class="voto nolava piena" data-perc="no"><p>NO</p></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>situazione</td>
+                                    <td>lavagna</td>
+                                    <td>Rumore</td>
+                                    <td>orario feedback</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>si</td>
+                                    <td>no</td>
+                                    <td>orario feedback</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>no</td>
+                                    <td>si</td>
+                                    <td>10:12</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>si</td>
+                                    <td>no</td>
+                                    <td>10:07</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>si</td>
+                                    <td>no</td>
+                                    <td>9:48</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>si</td>
+                                    <td>si</td>
+                                    <td>9:20</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     </div>
@@ -178,5 +267,11 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
+
+
+    <script type="text/javascript">
+        window.mySwipe = Swipe(document.getElementById('slider'));
+    </script>
+
 </body>
 </html>

@@ -1,25 +1,76 @@
-/**
- * Created by ivanmorandi on 04/12/14.
- */
-$(document).ready(function() {
+const TIME_TRANSLATION = 400;
+const TIME_SLIDE = 2000;
 
-    var leftMovement = $("mContainer").width();
-    var showing=0; //0=map 1=list
-    var timeSwipe=200;
+var polo = "A";
+var mobile;
+var piano = "0";
+var mappa = "maps/APiano0.html";
+var widthDetails = 0;
+var toogle = false;
 
-    $(".mContainter").on("swiperight", function () {
-        if (showing == 1) {
-            $(".mMap").animate({"left": "+=" + leftMovement},timeSwipe,'linear');
-            $(".mListRoom").animate({"left": "+=" + leftMovement},timeSwipe,'linear');
-            showing=0;
+$(document).ready(function () {
+    mobile = jQuery.browser.mobile;
+
+    //Se sono su un telefono, vengo redirezionato
+    if (!mobile) {
+        window.location.replace("index.html");
+    }
+
+    //carico la mappa
+    $(".mMap").load(mappa);
+
+    //mi salvo la grandezza del div details
+    //widthDetails = $(".mDetails").width();
+
+    //cambio piano
+    $(".nav .nav-second-level li").click(function () {
+        piano = $(this).data("piano");
+        mappa = "maps/" + polo + "Piano" + piano + ".html";
+        $(".mMap").load(mappa);
+    });
+
+    //dettagli dell'aula selezionata
+    $(".mMap").on("click", ".room", function () {
+
+        if (toogle == false) {
+
+            $(".mDetails").show();
+            $(".mDetails").animate({ left: "0%" }, TIME_TRANSLATION, 'linear');
+
+            toogle = true;
+        }
+        else {
+            $(".details").fadeOut();
+            //aggiorna valori
+            $(".details").fadeIn();
+
         }
     });
-    $(".mContainter").on("swipeleft", function () {
-        if (showing == 0) {
-            $(".mMap").animate({"left": "-=" + leftMovement},timeSwipe,'linear');
-            $(".mListRoom").animate({"left": "-=" + leftMovement},timeSwipe,'linear');
-            showing=1;
+    /*).on("click", "td:not(.room)", function () { //uscita dai dettagli
+
+        if (toogle == true) {
+            //aggiorna valori
+            $(".detailsRoom").animate({ left: "100%" }, TIME_TRANSLATION, 'linear', function () {
+                $(".detailsRoom").hide();
+            });
+            toogle = false;
         }
+    });*/
+
+    // click X per uscire dai dettagli
+    $(".closeDetails").click(function () {
+
+            $(".mDetails").animate({ left: "100%" }, TIME_TRANSLATION, 'linear', function () {
+                $(".mDetails").hide();
+            });
+            toogle = false;
+    });
+
+
+    //apparizione feedback lavagna
+    $(".feedbackQuantity .voto").on("click", function () {
+
+        $(".lavagna").slideDown("slow");
     });
 
 });
