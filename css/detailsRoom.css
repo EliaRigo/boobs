@@ -1,6 +1,7 @@
 .detailsRoom{
     top: 50px;
     height: 95%;
+    font-size: 13pt;
     background-color: #f8f8f8;
     border: 1px solid black!important;
     position: absolute;
@@ -66,20 +67,69 @@
 
 
 .detailsRoom .titleVuota{
-    background-color: rgba(74,186,37,1);
+    background-color: rgba(100,196,57,1);
 }
 
-.detailsRoom .titleMzza{
+.detailsRoom .titleMezza{
     background-color: rgba(232,193,23,1);
 }
 
 .detailsRoom .titleAffollata{
-    background-color: rgba(255,63,0,1);
+    background-color: rgba(253,96,41,1);
 }
 
 .detailsRoom .titlePiena{
-    background-color: rgba(255,84,84,1);
+    background-color: rgba(246,49,54,1);
 }
+
+.detailsRoom .titleLezione{
+    background-color: rgba(161,84,245,1);
+}
+
+
+.detailsRoom .titleVuota:hover{
+    background-color: rgba(80,176,37,1);
+}
+
+.detailsRoom .titleMezza:hover{
+    background-color: rgba(212,173,3,1);
+}
+
+.detailsRoom .titleAffollata:hover{
+    background-color: rgba(233,76,21,1);
+}
+
+.detailsRoom .titlePiena:hover{
+    background-color: rgba(226,29,34,1);
+}
+
+.detailsRoom .titleLezione:hover{
+    background-color: rgba(141,64,225,1);
+}
+
+
+
+
+.detailsRoom .titlebar .titleVuota:hover{
+    background-color: rgba(100,196,57,1);
+}
+
+.detailsRoom .titlebar .titleMezza:hover{
+    background-color: rgba(232,193,23,1);
+}
+
+.detailsRoom .titlebar .titleAffollata:hover{
+    background-color: rgba(253,96,41,1);
+}
+
+.detailsRoom .titlebar .titlePiena:hover{
+    background-color: rgba(246,49,54,1);
+}
+
+.detailsRoom .titlebar .titleLezione:hover{
+    background-color: rgba(161,84,245,1);
+}
+
 
 .detailsRoom .room {
     margin-left: auto;
