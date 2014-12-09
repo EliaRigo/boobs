@@ -19,6 +19,8 @@ $(document).ready(function () {
     //carico la mappa
     $(".mMap").load(mappa);
 
+    //$(".voto").css({height:""+$(".voto").width()});
+
     //mi salvo la grandezza del div details
     //widthDetails = $(".mDetails").width();
 
@@ -31,6 +33,23 @@ $(document).ready(function () {
 
     //dettagli dell'aula selezionata
     $(".mMap").on("click", ".room", function () {
+
+        if (toogle == false) {
+
+            $(".mDetails").show();
+            $(".mDetails").animate({ left: "0%" }, TIME_TRANSLATION, 'linear');
+
+            toogle = true;
+        }
+        else {
+            $(".details").fadeOut();
+            //aggiorna valori
+            $(".details").fadeIn();
+
+        }
+    });
+
+    $(".liRoom").on("click", function () {
 
         if (toogle == false) {
 
