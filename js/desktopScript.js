@@ -5,6 +5,7 @@
 const TIME_TRANSLATION = 400;
 const TIME_SLIDE = 2000;
 
+var maps = true;
 var polo="A";
 var mobile;
 var piano="0";
@@ -30,6 +31,17 @@ $(document).ready(function(){
 
     //mi salvo la grandezza del div details
     widthDetails = $(".detailsRoom").width();
+
+    $(".sel-mappe").click(function () {
+        $(".containerMap").load(mappa);
+    });
+
+    $(".sel-list-rooms").click(function () {
+        //$(".containerMap:first-child").remove();
+        $(".containerMap").load("listprova.html");
+        $(".containerMap").css("width","80%");
+
+    });
 
     //cambio piano
     $(".nav .nav-second-level li").click(function(){

@@ -35,10 +35,5 @@ var room = function (){
     function setRumore(rumore) { Rumore = rumore; }
     function setQuantita(quantita) { Quantita = quantita; }
 
-    function
-
-
-
-
 
 };
