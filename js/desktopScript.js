@@ -39,7 +39,6 @@ $(document).ready(function(){
     $(".sel-list-rooms").click(function () {
         //$(".containerMap:first-child").remove();
         $(".containerMap").load("listprova.html");
-        $(".containerMap").css("width","80%");
 
     });
 
@@ -135,6 +134,38 @@ $(document).ready(function(){
         });*/
 
 
+    });
+
+
+    $(".containerMap").on("click",".list-rooms li", function () {
+        widthDetails = $(".detailsRoom").width();
+        var larghezza = widthDetails;
+        var tmp = "-="+larghezza;
+        if(toogle==false) {
+            //aggiorna valori
+
+            if(mobile)
+            {
+                tmp=0;
+            }
+
+            $(".detailsRoom").show();
+            $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear');
+            if(mobile)
+            {
+                $(".detailsRoom").css("width","100%");
+                $(".detailsRoom").css("heigth","100%");
+            }
+
+            toogle=true;
+        }
+        else
+        {
+            $(".details").fadeOut();
+            //aggiorna valori
+            $(".details").fadeIn();
+
+        }
     });
 
 });

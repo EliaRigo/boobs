@@ -1,0 +1,131 @@
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+
+    .containerMap{
+
+    //border: solid black;
+        overflow: hidden;
+        height: 90%;
+        width: 320px;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .containerMap{
+
+    //border: solid black;
+        overflow: hidden;
+        height: 90%;
+        width: 480px;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    .containerMap{
+
+    //border: solid black;
+        overflow: hidden;
+    //    height: 700px;
+    //    width: 600px;
+        width: 65%;
+        height: 90%;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+.containerMap{
+    z-index: 0;
+    height: 93%;
+    width: 80%;
+}
+
+.containerMap table{
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+tr{
+    position: relative;
+    //border: none;
+    //overflow: none;
+
+}
+
+td{
+    position: relative;
+    text-align: center;
+    width: 8.33%;
+    overflow: hidden;
+    border: 1px solid;
+}
+
+.noborderTopBot{
+    border-bottom:none;
+    border-top:none;
+}
+
+.hide{
+    display: none;
+}
+
+.tistinadiazzo {
+    //outline: thin solid #000000;
+}
+
+.invisible td{
+
+}
+
+.invisible{
+    outline: thin solid #000000;
+}
+
+.aula{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: fantasy;
+}
+
+.scale{
+    background-image: url("../images/stair.png");
+    background-size: cover;
+}
+
+.noRoom{
+    /*background-image: url("stair.png");
+    background-size: cover;*/
+
+    background-color: #999;
+}
+
+
+
+
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+
+a:hover{
+   text-decoration: none;
+    color: inherit;
+
+}
+
+

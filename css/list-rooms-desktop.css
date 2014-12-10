@@ -13,11 +13,36 @@
 }
 
 .list-rooms ul li{
-    background-color: cornflowerblue;
+    background-color: #f8f8f8;
+    border: #e7e7e7 1px solid;
     margin-bottom: 15px;
     padding: 15px;
 }
 
+.list-rooms ul li:hover{
+    background-color: #aaa;
+}
+
 .list-rooms ul li .list-room{
 
+}
+
+.room-status{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.room-nome{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.room-polo{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.room-piano{
+    display: inline-block;
+    margin-right: 50px;
 }
