@@ -202,11 +202,11 @@ function details(aula){
     elem.removeClass("piena-nograd");
     elem.removeClass("lezione-nograd");
     switch (poloA[index].quantita){
-        case 0: elem.addClass("vuota-nograd"); break;
-        case 25: elem.addClass("mezza-nograd"); break;
-        case 50: elem.addClass("affollata-nograd"); break;
-        case 75: elem.addClass("piena-nograd"); break;
-        case -100: elem.addClass("lezione-nograd"); break;
+        case 0: elem.addClass("vuota-nograd-titlebar"); break;
+        case 25: elem.addClass("mezza-nograd-titlebar"); break;
+        case 50: elem.addClass("affollata-nograd-titlebar"); break;
+        case 75: elem.addClass("piena-nograd-titlebar"); break;
+        case -100: elem.addClass("lezione-nograd-titlebar"); break;
     }
 
     var occupatezzosita;
