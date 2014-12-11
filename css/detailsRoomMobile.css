@@ -13,10 +13,14 @@
     padding-bottom: 10px;
 }
 */
+
+
 .detailsContainer {
     width:100%;
     position:relative;
     height:100%;
+    
+    z-index:10000000000;
 }
 
 .detailsContainer p{
@@ -39,7 +43,7 @@
 
 .detailsContainer table td{
     border: none;
-    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -173,8 +177,7 @@
     margin-top: 10px;
 }
 
-.lavagna{
-
+.feddbackQuantity {
 }
 
 .lav-feedback td{
