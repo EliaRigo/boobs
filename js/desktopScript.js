@@ -24,7 +24,9 @@ $(document).ready(function(){
     }
 
     //carico la mappa
-    $(".containerMap").load(mappa);
+    $(".containerMap").load(mappa, function () {
+        populate();
+    });
 
 
 
@@ -46,7 +48,10 @@ $(document).ready(function(){
     $(".nav .nav-second-level li").click(function(){
         piano = $(this).data("piano");
         mappa = "maps/"+polo+"Piano"+piano+".html";
-        $(".containerMap").load(mappa);
+        $(".containerMap").load(mappa, function () {
+            populate();
+        });
+        //da caricare i nuovi dati
     });
 
     //dettagli dell'aula selezionata
@@ -58,10 +63,7 @@ $(document).ready(function(){
         if(toogle==false) {
             //aggiorna valori
 
-            if(mobile)
-            {
-                tmp=0;
-            }
+            details($(this).text());
 
             $(".detailsRoom").show();
             $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear');
@@ -84,9 +86,6 @@ $(document).ready(function(){
         var larghezza = widthDetails;
         var tmp = "+="+larghezza;
         if(toogle==true) {
-            //aggiorna valori
-            if(mobile)
-                tmp="100%";
 
             $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear', function(){
                 $(".detailsRoom").hide();
@@ -104,8 +103,6 @@ $(document).ready(function(){
         var tmp = "+="+larghezza;
         if(toogle==true) {
             //aggiorna valori
-            if(mobile)
-                tmp="100%";
 
             $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear', function(){
                 $(".detailsRoom").hide();
@@ -173,5 +170,84 @@ $(document).ready(function(){
 
 
 function populate(){
+    for(var i=0;i<poloA.length;i++)
+    {
+        //alert('.room:contains('+poloA[i].nome+')');
+        var elem = $('.room:contains('+poloA[i].nome+')');
+
+        elem.removeClass("vuota");
+        elem.removeClass("mezza");
+        elem.removeClass("affollata");
+        elem.removeClass("piena");
+        elem.removeClass("lezione");
+
+        switch (poloA[i].quantita){
+            case 0: elem.addClass("vuota"); break;
+            case 25: elem.addClass("mezza"); break;
+            case 50: elem.addClass("affollata"); break;
+            case 75: elem.addClass("piena"); break;
+            case -100: elem.addClass("lezione"); break;
+        }
+    }
+}
+
+function details(aula){
+    var index = getIndexFromRoom(aula);
+    $(".det-room").text(aula);
+
+    var elem =$(".titleBar");
+    elem.removeClass("vuota-nograd");
+    elem.removeClass("mezza-nograd");
+    elem.removeClass("affollata-nograd");
+    elem.removeClass("piena-nograd");
+    elem.removeClass("lezione-nograd");
+    switch (poloA[index].quantita){
+        case 0: elem.addClass("vuota-nograd"); break;
+        case 25: elem.addClass("mezza-nograd"); break;
+        case 50: elem.addClass("affollata-nograd"); break;
+        case 75: elem.addClass("piena-nograd"); break;
+        case -100: elem.addClass("lezione-nograd"); break;
+    }
+
+    var occupatezzosita;
+    switch (poloA[index].quantita){
+        case 0: occupatezzosita="Libera"; break;
+        case 25: occupatezzosita="Leggermente occupata"; break;
+        case 50: occupatezzosita="Affollata"; break;
+        case 75: occupatezzosita="Piena"; break;
+        case -100: occupatezzosita="Lezione"; break;
+    }
+
+    var lavagna;
+    if(poloA[index].lavagna == 1)
+        lavagna = "Disponibile";
+    else
+        lavagna = "Non Disponibile";
+
+    var rumore;
+    if(poloA[index].rumore == 1)
+        rumore = "Silenzioso";
+    else
+        rumore = "Non Silenzioso";
+
+
+    var stringa =
+        "<ul>" +
+        "<li>"+aula+"</li>"+
+        "<li>"+occupatezzosita+"</li>"+
+        "<li>"+lavagna+"</li>"+
+        "<li>"+rumore+"</li></ul>";
+
+    $(".dettagli:nth-child(2)").html(stringa);
+
+
+}
+
+function getIndexFromRoom(aula)
+{
+    for(var i = 0;i<poloA.length;i++) {
+        if (poloA[i].nome == aula)
+            return i;
+    }
 
 }
