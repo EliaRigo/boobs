@@ -2,10 +2,14 @@
     width: 100%;
     height: 97%;
     position: relative;
+
     //margin: 0px auto;
 
     //margin-top: 30px;
     font-size: 15pt;
+    padding-top: 30px;
+    padding-left: 5%;
+
 }
 
 .list-polo{
@@ -13,19 +17,34 @@
     height: 100%;
     position: relative;
     display: inline-block;
-    overflow-y: scroll;
 
-    padding: 30px 0px 30px 40px;
+    overflow-y: hidden;
+    //padding: 0px 0px 30px 40px;
+    border: #e7e7e7 1px solid;
+}
+
+.list-list{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
 }
 
 .list-container{
+    width: 100%;
+    height: 100%;
     background-color: #f8f8f8;
     padding: 10px;
+    position: absolute;
+    top:0px;
+    //overflow-y: scroll;
 }
 
 .list-nome-polo{
     text-align: center;
     margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 2px solid lightgray;
 }
 
 .list-rooms ul{
@@ -36,7 +55,8 @@
 
 .list-rooms ul li{
     //background-color: #f8f8f8;
-    border: #e7e7e7 1px solid;
+    //border: #e7e7e7 1px solid;
+    background-color: rgba(135,211,124,0.3);
     margin-bottom: 15px;
     padding: 15px;
 }
@@ -49,9 +69,21 @@
 
 }
 
+.list-room{
+    //padding: 15px;
+    display: inline-block;
+}
+
 .room-status{
     display: inline-block;
     margin-right: 10px;
+}
+
+.room-status-p{
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    padding: 10px;
 }
 
 .room-nome{
@@ -68,3 +100,26 @@
     display: inline-block;
     margin-right: 50px;
 }
+
+.border-vuota{
+    border: 1px solid rgba(100,196,57,1);
+}
+
+.border-mezza{
+    border: 1px solid rgba(232,193,23,1);
+}
+.border-affollata{
+    border: 1px solid rgba(253,96,41,1);
+
+}
+.border-piena{
+    border: 1px solid rgba(246,49,54,1);
+}
+.border-lezione{
+    border: 1px solid rgba(161,84,245,1);
+}
+
+.back-vuota{
+    background-color: #87d37c;
+}
+
