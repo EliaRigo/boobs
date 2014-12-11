@@ -19,6 +19,8 @@ $(document).ready(function () {
     //carico la mappa
     $(".mMap").load(mappa);
 
+    $(".swipeAvviso").animate({ "opacity": 0 }, 3000).hide("slow");
+
     //$(".voto").css({height:""+$(".voto").width()});
 
     //mi salvo la grandezza del div details
