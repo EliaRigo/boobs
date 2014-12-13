@@ -2,7 +2,7 @@
  * Created by ivanmorandi on 11/12/14.
  */
 
-var poloA = [
+var dati = [
     {
         nome : "A201",
         piano : 0,

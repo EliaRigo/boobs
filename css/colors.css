@@ -1,3 +1,7 @@
+body{
+    color: #505050;
+}
+
 .vuota-nograd-titlebar{
     background-color: rgba(100,196,57,1);
 }
