@@ -7,14 +7,38 @@ class MysqlClass
     private $password = "nitdevonne95";
     private $nomedb = "my_sidavatar";
 
-
     // controllo sulle connessioni attive
 	private $attiva = false;
 
+	public function connetti()
+	{
+		if(!$this->attiva)
+		{
+			// connessione a MySQL con l'estensione MySQLi
+			$mysqli = new mysqli($this->nomehost,$this->nomeuser,$this->password,$this->nomedb);
+			// verifica dell'avvenuta connessione
+			if (mysqli_connect_errno()) {
+				// notifica in caso di errore
+				echo "Errore in connessione al DBMS: ".mysqli_connect_error();
+				// interruzione delle esecuzioni i caso di errore
+				return false;
+				exit();
+			}
+			else {
+				// notifica in caso di connessione attiva
+				//echo "Connessione avvenuta con successo";
+				return $mysqli;
+				}
+		}
+		else {
+			return $mysqli;
+		}
+	}
+}
+	/*
     // funzione per la connessione a MySQL
     public function connetti()
     {
-	/*
         if(!$this->attiva)
         {
          if($connessione = mysql_connect($this->nomehost,$this->nomeuser,$this->password) or die (mysql_error()))
@@ -24,33 +48,20 @@ class MysqlClass
         }else{
          return true;
         }
+	}
 	*/
-		$mysqli = new mysqli($this->nomehost,$this->nomeuser,$this->password,$this->nomedb);
-		// verifica dell'avvenuta connessione
-		if (mysqli_connect_errno()) {
-				   // notifica in caso di errore
-				echo "Errore in connessione al DBMS: ".mysqli_connect_error();
-				   // interruzione delle esecuzioni i caso di errore
-				exit();
-		 
-		}
-		else {
-				   // notifica in caso di connessione attiva
-				echo "Connessione avvenuta con successo";
-		}	
-    }
-
-//funzione per l'esecuzione delle query 
-public function query($sql)
- {
-  if(isset($this->attiva))
-  {
-  $sql = mysql_query($sql) or die (mysql_error());
-  return $sql; 
-  }else{
-  return false; 
-  }
- }
+	/*
+	//funzione per l'esecuzione delle query 
+	public function query($sql)
+	 {
+	  if(isset($this->attiva))
+	  {
+	  $sql = mysql_query($sql) or die (mysql_error());
+	  return $sql; 
+	  }else{
+	  return false; 
+	  }
+	 }
  
 //funzione per l'inserimento dei dati in tabella
     public function inserisci($t,$v,$r = null)
@@ -130,4 +141,5 @@ public function disconnetti()
  }
 	
 }
+*/
 ?>
