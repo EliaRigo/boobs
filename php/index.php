@@ -32,10 +32,12 @@ if(mysqli_conn != false) {
 		  $room->init($row['NAME'],$row['FLOOR'],$row['POLO']);
 		  $room->setLavagna($row['BLACKBOARD']);
 		  $room->setRumore($row['NOISE']);
-		  $room->setQuantita($row['ROOM_LEVEL']);
+		  //$room->setQuantita($row['ROOM_LEVEL']); 
+		  $room->setQuantita(get_schedule_value($mysqli_conn,$row['ID_ROOM']));
 		  array_push($rooms,$room);
 		}
 	print_r($rooms);
+	//echo json_encode(get_object_vars($rooms));
 	  /*
 		//echo $row[0];
 		echo $row['ID_ROOM'];
@@ -52,15 +54,32 @@ if(mysqli_conn != false) {
 // chiusura della connessione
 $mysqli_conn->close();
 
-/*
-date_default_timezone_set('Europe/Rome');
-$today = getdate();
-$hour_gap = $today['hours']."_".($today['hours']+1);
-echo $hour_gap;
-echo "\n";
-echo strtoupper($today['weekday'][0].$today['weekday'][1].$today['weekday'][2]);
-echo "\n";
-*/
+function get_schedule_value($mysqli_conn,$id_room){
+	date_default_timezone_set('Europe/Rome');
+	$today = getdate();
+	$hour_gap = $today['hours']."_".($today['hours']+1);
+	$query = " SELECT ".$hour_gap." FROM SCHEDULE WHERE ID_ROOM=".$id_room; //ADD DAY
+	$result = $mysqli_conn->query($query);
+	$row = $result->fetch_array(MYSQLI_NUM);
+	if($row[0] != 1) { //NO LEZIONE - CALCOLO MEDIA
+		$query_avg = " SELECT AVG(USER_LEVEL) AS AVG_AULA FROM FEEDBACK WHERE ID_ROOM=".$id_room; //ADD HOUR FEEDBACK VALIDITY
+		$avg_result = ($mysqli_conn->query($query_avg));
+		$avg_row = $avg_result->fetch_array(MYSQLI_NUM);
+		$avg_pounder = $avg_row[0];
+		if($avg_pounder != NULL) {
+			return $avg_pounder * 0.8;
+			}
+		else {
+			return 0;
+			}
+	}
+	else { //LEZIONE
+		return 1;
+	}
+	//echo "\n";
+	//echo strtoupper($today['weekday'][0].$today['weekday'][1].$today['weekday'][2]);
+	//echo "\n";
+	}
 ?>
 </body>
 </html>
