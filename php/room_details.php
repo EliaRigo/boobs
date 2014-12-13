@@ -1,12 +1,12 @@
 <?php
 class room_details
 {
-	private $Name = "";
-    private $Piano = "";
-    private $Polo = "";
-    private $Lavagna = 0;
-    private $Rumore = 0;
-    private $Quantita = 0;
+	public $Name = "";
+    public $Piano = "";
+    public $Polo = "";
+    public $Lavagna = 0;
+    public $Rumore = 0;
+    public $Quantita = 0;
     //private $Feedback = [];
 
     public function init ($name, $piano, $polo) {

@@ -1,9 +1,3 @@
-<html>
-<head>
-<title>MioBlog</title>
-</head>
-<body>
-<h1>MioBlog: realizzato in PHP e MySQL</h1>
 <?php
 // inclusione del file contenente la classe
 include "config.php";
@@ -36,8 +30,8 @@ if(mysqli_conn != false) {
 		  $room->setQuantita(get_schedule_value($mysqli_conn,$row['ID_ROOM']));
 		  array_push($rooms,$room);
 		}
-	print_r($rooms);
-	//echo json_encode(get_object_vars($rooms));
+	//print_r($rooms);
+	echo json_encode($rooms);
 	  /*
 		//echo $row[0];
 		echo $row['ID_ROOM'];
@@ -81,5 +75,3 @@ function get_schedule_value($mysqli_conn,$id_room){
 	//echo "\n";
 	}
 ?>
-</body>
-</html>
