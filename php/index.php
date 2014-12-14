@@ -88,9 +88,9 @@ function insert_feedback($user_level,$blackboard,$noise,$id_room){
 	//inseriamo feedback
 	$query = " INSERT INTO FEEDBACK(USER_LEVEL,BLACKBOARD,NOISE,ID_ROOM) VALUES (".$user_level.",".$blackboard.",".$noise.",".$id_room.")";
 	if(($mysqli_conn->query($query))== true)
-		echo "INSERITO!";
+		return true;
 	else
-		echo "NO";
+		echo false;
 }
 
 //Test function
