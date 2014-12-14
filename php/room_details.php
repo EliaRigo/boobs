@@ -1,6 +1,7 @@
 <?php
 class room_details
 {
+	public $ID = "";
 	public $Name = "";
     public $Piano = "";
     public $Polo = "";
@@ -9,12 +10,14 @@ class room_details
     public $Quantita = 0;
     //private $Feedback = [];
 
-    public function init ($name, $piano, $polo) {
+    public function init ($id, $name, $piano, $polo) {
+		$this->ID = $id;
         $this->Name = $name;
         $this->Piano = $piano;
         $this->Polo = $polo;
     }
 
+	public function getID() {return $this->ID; }
     public function getName(){ return $this->Name; }
     public function getPiano() { return $this->Piano; }
     public function getPolo() { return $this->Polo; }
