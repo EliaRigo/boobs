@@ -22,7 +22,7 @@
     <favorites_list name="SWENG 2 - Progetto" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5340818">
+    <splitter split-orientation="horizontal" split-proportion="0.58380115">
       <split-first>
         <leaf>
           <file leaf-file-name="detailsRoom.css" pinned="false" current="false" current-in-tab="false">
@@ -38,29 +38,41 @@
           <file leaf-file-name="populateDetail.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/populateDetail.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="660">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
                   <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="38" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="desktopScript.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="desktopScript.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/desktopScript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33251232" vertical-offset="0" max-vertical-offset="6810">
-                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
+                <state vertical-scroll-proportion="-18.692308" vertical-offset="3459" max-vertical-offset="8490">
+                  <caret line="263" column="24" selection-start-line="263" selection-start-column="24" selection-end-line="263" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
+          <file leaf-file-name="APiano-1.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/maps/APiano-1.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-19.375" vertical-offset="75" max-vertical-offset="3795">
-                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.7043147" vertical-offset="30" max-vertical-offset="1275">
+                  <caret line="39" column="92" selection-start-line="39" selection-start-column="92" selection-end-line="39" selection-end-column="92" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="APiano0.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/maps/APiano0.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="1485">
+                  <caret line="3" column="89" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
+                  <folding>
+                    <element signature="n#style#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -69,11 +81,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="list-rooms-desktop.css" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="list-rooms-desktop.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/list-rooms-desktop.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
-                  <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+                <state vertical-scroll-proportion="-1.319202" vertical-offset="1463" max-vertical-offset="2265">
+                  <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -89,31 +101,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="styleMap.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/styleMap.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="713" max-vertical-offset="1515">
-                  <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="data.js" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/data.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="3660">
-                  <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="colors.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/colors.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2925">
                   <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="11.541667" vertical-offset="2197" max-vertical-offset="3795">
+                  <caret line="128" column="56" selection-start-line="128" selection-start-column="56" selection-end-line="128" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
@@ -137,15 +139,16 @@
         <option value="$PROJECT_DIR$/css/mobile.css" />
         <option value="$PROJECT_DIR$/js/populateDetail.js" />
         <option value="$PROJECT_DIR$/css/detailsRoom.css" />
-        <option value="$PROJECT_DIR$/maps/APiano0.html" />
         <option value="$PROJECT_DIR$/css/sb-admin-2.css" />
         <option value="$PROJECT_DIR$/css/colors.css" />
         <option value="$PROJECT_DIR$/css/styleMap.css" />
-        <option value="$PROJECT_DIR$/js/data.js" />
         <option value="$PROJECT_DIR$/php/index.php" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/listprova.html" />
         <option value="$PROJECT_DIR$/css/list-rooms-desktop.css" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/maps/APiano-1.html" />
+        <option value="$PROJECT_DIR$/maps/APiano0.html" />
+        <option value="$PROJECT_DIR$/js/data.js" />
         <option value="$PROJECT_DIR$/js/desktopScript.js" />
       </list>
     </option>
@@ -382,14 +385,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/populateDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="660">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="38" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/desktopScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="4875">
@@ -696,10 +691,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maps/APiano0.html">
+    <entry file="file://$PROJECT_DIR$/php/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48308524" vertical-offset="723" max-vertical-offset="1485">
-          <caret line="72" column="78" selection-start-line="72" selection-start-column="78" selection-end-line="72" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -707,6 +703,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="38" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maps/APiano0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="1485">
+          <caret line="3" column="89" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85037404" vertical-offset="2858" max-vertical-offset="3660">
+          <caret line="236" column="16" selection-start-line="236" selection-start-column="16" selection-end-line="236" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styleMap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6909091" vertical-offset="690" max-vertical-offset="1515">
+          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -719,17 +741,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styleMap.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="683" max-vertical-offset="1515">
-          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+        <state vertical-scroll-proportion="11.541667" vertical-offset="2197" max-vertical-offset="3795">
+          <caret line="128" column="56" selection-start-line="128" selection-start-column="56" selection-end-line="128" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listprova.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0" vertical-offset="0" max-vertical-offset="2565">
+        <state vertical-scroll-proportion="0.7043147" vertical-offset="210" max-vertical-offset="2565">
           <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
           <folding />
         </state>
@@ -745,40 +767,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/list-rooms-desktop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="3660">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375" vertical-offset="75" max-vertical-offset="3795">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.319202" vertical-offset="1463" max-vertical-offset="2265">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/desktopScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251232" vertical-offset="0" max-vertical-offset="6810">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
+        <state vertical-scroll-proportion="-18.692308" vertical-offset="3459" max-vertical-offset="8490">
+          <caret line="263" column="24" selection-start-line="263" selection-start-column="24" selection-end-line="263" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maps/APiano-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7043147" vertical-offset="30" max-vertical-offset="1275">
+          <caret line="39" column="92" selection-start-line="39" selection-start-column="92" selection-end-line="39" selection-end-column="92" />
           <folding />
         </state>
       </provider>
