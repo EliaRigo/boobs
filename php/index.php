@@ -53,7 +53,10 @@ function get_json() {
 function get_schedule_value($mysqli_conn,$id_room){
 	date_default_timezone_set('Europe/Rome');
 	$today = getdate();
-	$hour_gap = $today['hours']."_".($today['hours']+1);
+	if($today['hours'] >= 20 || $today['hours'] <9) //no orario lezione, punta a domani
+		$hour_gap = '9_10';
+	else
+		$hour_gap = $today['hours']."_".($today['hours']+1);
 	$query = " SELECT ".$hour_gap." FROM SCHEDULE WHERE ID_ROOM=".$id_room; //ADD DAY
 	$result = $mysqli_conn->query($query);
 	$row = $result->fetch_array(MYSQLI_NUM);
