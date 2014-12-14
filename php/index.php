@@ -57,20 +57,20 @@ function get_schedule_value($mysqli_conn,$id_room){
 	$query = " SELECT ".$hour_gap." FROM SCHEDULE WHERE ID_ROOM=".$id_room; //ADD DAY
 	$result = $mysqli_conn->query($query);
 	$row = $result->fetch_array(MYSQLI_NUM);
-	if($row[0] != 1) { //NO LEZIONE - CALCOLO MEDIA
+	if($row[0] != 1) { //0 NO LEZIONE - CALCOLO MEDIA
 		$query_avg = " SELECT AVG(USER_LEVEL) AS AVG_AULA FROM FEEDBACK WHERE ID_ROOM=".$id_room; //ADD HOUR FEEDBACK VALIDITY
 		$avg_result = ($mysqli_conn->query($query_avg));
 		$avg_row = $avg_result->fetch_array(MYSQLI_NUM);
 		$avg_pounder = $avg_row[0];
 		if($avg_pounder != NULL) {
-			return $avg_pounder * 0.8;
+			return $avg_pounder * 0.8; //media * 0.8
 			}
 		else {
-			return 0;
+			return 0; //aula vuota
 			}
 	}
 	else { //LEZIONE
-		return 1;
+		return -100; //accordato con Ivan
 	}
 	//echo "\n";
 	//echo strtoupper($today['weekday'][0].$today['weekday'][1].$today['weekday'][2]);
