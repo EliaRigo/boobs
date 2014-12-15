@@ -62,6 +62,10 @@ body{
     background-color: rgba(141,64,225,1);
 }
 
+.votato-nograd{
+    background-color: rgba(189,195,199,1);
+}
+
 
 .lezione{
     background: rgb(172,118,247); /* Old browsers */
