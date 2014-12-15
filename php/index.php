@@ -66,7 +66,7 @@ function get_schedule_value($mysqli_conn,$id_room){
 		$avg_row = $avg_result->fetch_array(MYSQLI_NUM);
 		$avg_pounder = $avg_row[0];
 		if($avg_pounder != NULL) {
-			return $avg_pounder * 0.8; //media * 0.8
+			return $avg_pounder * 0.9; //media * 0.8
 			}
 		else {
 			return 0; //aula vuota

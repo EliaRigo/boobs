@@ -99,6 +99,13 @@
     font-size: 20pt;
 }
 
+.det-room{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 20pt;
+}
+
 .left{
     position: relative;
     text-align: justify;

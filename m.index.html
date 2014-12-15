@@ -33,6 +33,9 @@
     <!-- Mobile CSS -->
     <link href="css/mobile.css" rel="stylesheet" type="text/css">
 
+    <!-- Colors CSS -->
+    <link href="css/colors.css" rel="stylesheet" type="text/css">
+
     <!-- Mobile js-->
     <script src="js/mobile.js"></script>
     
@@ -41,6 +44,9 @@
 
     <!-- jquery detect mobile browser -->
     <script src="js/detectMobileBrowser.js"></script>
+
+    <!-- DATI -->
+    <script src="js/data.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -312,10 +318,10 @@
         <div class="mDetails">
             <div class="detailsContainer">
                 <table class="table">
-                    <tr class="titleVuota titleBar">
+                    <tr class="vuota-nograd-titlebar titleBar">
                         <td colspan="1"><div class="closeDetails detailsClose">X</div></td>
                         <td colspan="4">
-                            <div class="room">
+                            <div class="det-room">
                                 A201
                             </div>
                         </td>
@@ -342,11 +348,11 @@
                         </td>
                     </tr>
                     <tr class="feedbackQuantity">
-                        <td><div class="voto vuota" data-perc="0"><p>V</p></div></td>
-                        <td><div class="voto mezza" data-perc="1"><p>M</p></div></td>
-                        <td><div class="voto affollata" data-perc="2"><p>A</p></div></td>
-                        <td><div class="voto piena" data-perc="3"><p>P</p></div></td>
-                        <td><div class="voto lezione" data-perc="-1"><p>L</p></div></td>
+                        <td><div class="voto vuota-nograd" data-perc="0"><p>V</p></div></td>
+                        <td><div class="voto mezza-nograd" data-perc="1"><p>M</p></div></td>
+                        <td><div class="voto affollata-nograd" data-perc="2"><p>A</p></div></td>
+                        <td><div class="voto piena-nograd" data-perc="3"><p>P</p></div></td>
+                        <td><div class="voto lezione-nograd" data-perc="-1"><p>L</p></div></td>
 
                     </tr>
 
@@ -362,21 +368,21 @@
 
                     <tr class="lavagna lav-feedback">
                         <td colspan="1">
-                            <div class="voto lava vuota" data-perc="si"><p>SI</p></div>
+                            <div class="voto lava vuota-nograd" data-perc="si"><p>SI</p></div>
                         </td>
 
                         <td colspan="1">
-                            <div class="voto nolava piena" data-perc="no"><p>NO</p></div>
+                            <div class="voto nolava piena-nograd" data-perc="no"><p>NO</p></div>
                         </td>
 
                         <td></td>
 
                         <td colspan="1">
-                            <div class="voto sound vuota" data-perc="si"><p>SI</p></div>
+                            <div class="voto sound vuota-nograd" data-perc="si"><p>SI</p></div>
                         </td>
 
                         <td colspan="1">
-                            <div class="voto nosound piena" data-perc="no"><p>NO</p></div>
+                            <div class="voto nosound piena-nograd" data-perc="no"><p>NO</p></div>
                         </td>
                     </tr>
                     <tr>

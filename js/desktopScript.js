@@ -25,13 +25,33 @@ var boolrooms = false, boolnoise = false, boollavagna = false;
 //insert_feedback($user_level,$blackboard,$noise,$id_room)
 
 function send () {
-    alert(aulaattuale);
+    var quant = votorooms;
+    if(quant>=50)
+        quant+=25;
     $.ajax({
         url: "php/new_feedback.php",
-        data: { param1: votorooms, param2: votolavagna, param3: votonoise, param4: aulaattuales },
-        type: "POST",
-        success: function(response) { alert(response);}
+        data: { param1: quant, param2: votolavagna, param3: votonoise, param4: aulaattuale },
+        type: "POST"
     });
+
+    boollavagna = false;
+    boolnoise = false;
+
+    update();
+
+    var larghezza = widthDetails;
+    var tmp = "+="+larghezza;
+    if(toogle==true) {
+        //aggiorna valori
+
+        $(".detailsRoom").animate({left: tmp}, TIME_TRANSLATION, 'linear', function(){
+            $(".detailsRoom").hide();
+        });
+
+
+
+        toogle=false;
+    }
 }
 
 function update () {
@@ -106,7 +126,7 @@ function details(aula){
     if(index<0)
         return;
 
-    aulaattuale = aula;
+    aulaattuale = dati[index].ID;
     $(".det-room").text(aula);
 
 
@@ -399,12 +419,14 @@ $(document).ready(function(){
         var v = $(this).text();
         boolrooms = true;
 
+         /*
         $(".feedbackQuantity td div").removeClass("vuota-nograd");
         $(".feedbackQuantity td div").removeClass("mezza-nograd");
         $(".feedbackQuantity td div").removeClass("affollata-nograd");
         $(".feedbackQuantity td div").removeClass("piena-nograd");
         $(".feedbackQuantity td div").removeClass("lezione-nograd");
         $(".feedbackQuantity td div").addClass("votato-nograd");
+        */
 
         switch (v)
         {
