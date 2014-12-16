@@ -3,6 +3,9 @@ function insert_feedback($user_level,$blackboard,$noise,$id_room){
 	// inclusione del file contenente la classe
 	include "config.php";
 	include "room_details.php";
+
+
+	echo $user_level ." ". $blackboard ." ". $noise." ".$id_room;
 	// istanza della classe
 	$data_i = new MysqlClass();
 	// chiamata alla funzione di connessione
@@ -10,9 +13,9 @@ function insert_feedback($user_level,$blackboard,$noise,$id_room){
 	//inseriamo feedback
 	$query = " INSERT INTO FEEDBACK(USER_LEVEL,BLACKBOARD,NOISE,ID_ROOM) VALUES (".$user_level.",".$blackboard.",".$noise.",".$id_room.")";
 	if(($mysqli_conn->query($query))== true)
-		return true;
+		echo "Inserito";
 	else
-		echo false;
+		echo "Non inserito";
 }
 
 if (isset($_POST['param1']) &&
@@ -22,4 +25,6 @@ if (isset($_POST['param1']) &&
 	) {
         echo insert_feedback($_POST['param1'],$_POST['param2'],$_POST['param3'],$_POST['param4']);
     }
+    else
+        echo "Errore";
 ?>

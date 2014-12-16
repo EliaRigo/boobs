@@ -25,11 +25,12 @@ var boolrooms = false, boolnoise = false, boollavagna = false;
 //insert_feedback($user_level,$blackboard,$noise,$id_room)
 
 function send () {
+    alert(aulaattuale);
     $.ajax({
-        url: 'php/index.php',
-        type: 'post',
-        data: { "insert_feedback": { param1: votorooms, param2: votolavagna, param3: votonoise, param4: aulaattuale } },
-        success: function(response) { alert(response); }
+        url: "php/new_feedback.php",
+        data: { param1: votorooms, param2: votolavagna, param3: votonoise, param4: aulaattuales },
+        type: "POST",
+        success: function(response) { alert(response);}
     });
 }
 
@@ -398,6 +399,13 @@ $(document).ready(function(){
         var v = $(this).text();
         boolrooms = true;
 
+        $(".feedbackQuantity td div").removeClass("vuota-nograd");
+        $(".feedbackQuantity td div").removeClass("mezza-nograd");
+        $(".feedbackQuantity td div").removeClass("affollata-nograd");
+        $(".feedbackQuantity td div").removeClass("piena-nograd");
+        $(".feedbackQuantity td div").removeClass("lezione-nograd");
+        $(".feedbackQuantity td div").addClass("votato-nograd");
+
         switch (v)
         {
             case "V": votorooms = 0; break;
@@ -406,6 +414,8 @@ $(document).ready(function(){
             case "P": votorooms = 75; break;
             case "L": votorooms = -100; break;
         }
+
+
 
         //mostra lavagna
         $(".lavagna").show(TIME_SLIDE);
